@@ -4,7 +4,7 @@ require 'pp'
 require 'net/https'
 require 'uri'
 
-helplers do
+helpers do
   def post_to_slack(ref: , repo_full_name: )
     uri = URI.parse(ENV.fetch("SLACK_INCOMING_WEBHOOK_URL"))
     https = Net::HTTP.new(uri.host, uri.port)
